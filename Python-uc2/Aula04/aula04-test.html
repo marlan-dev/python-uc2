@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tabela de Tênis com Bootstrap 5</title>
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .img-tenis {
+            width: 100px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <h1 class="mb-4 text-center">Catálogo de Tênis Esportivos</h1>
+        
+        <div class="table-responsive-lg">
+            <table class="table table-striped table-hover align-middle shadow">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col" style="width: 15%">Foto</th>
+                        <th scope="col" style="width: 55%">Descrição</th>
+                        <th scope="col" style="width: 30%">Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Item 1 -->
+                    <tr>
+                        <td>
+                            <img src="https://via.placeholder.com/100x100.png?text=Nike+Air" 
+                                 class="img-thumbnail img-tenis" 
+                                 alt="Nike Air Force">
+                        </td>
+                        <td>
+                            <h5 class="mb-1">Nike Air Force 1 '07</h5>
+                            <ul class="list-unstyled">
+                                <li><small>Cor: Branco</small></li>
+                                <li><small>Material: Couro premium</small></li>
+                                <li><span class="badge bg-success">Disponível</span></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <span class="text-success fw-bold">R$ 899,90</span>
+                            <del class="text-muted d-block">R$ 1.099,90</del>
+                        </td>
+                    </tr>
+
+                    <!-- Item 2 -->
+                    <tr>
+                        <td>
+                            <img src="https://via.placeholder.com/100x100.png?text=Adidas" 
+                                 class="img-thumbnail img-tenis" 
+                                 alt="Adidas Superstar">
+                        </td>
+                        <td>
+                            <h5 class="mb-1">Adidas Superstar Foundation</h5>
+                            <ul class="list-unstyled">
+                                <li><small>Cor: Preto/Branco</small></li>
+                                <li><small>Característica: Shell toe</small></li>
+                                <li><span class="badge bg-warning text-dark">Últimas unidades</span></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <span class="text-success fw-bold">R$ 499,90</span>
+                            <div class="mt-1">
+                                <small class="text-muted">ou 10x R$ 49,99</small>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Itens 3-15 (padrão similar) -->
+                    <!-- [Conteúdo repetido com diferentes valores e informações] -->
+                    
+                </tbody>
+                <tfoot class="table-secondary">
+                    <tr>
+                        <td colspan="3" class="text-center small">
+                            * Preços válidos até 30/11/2023 | Frete grátis para compras acima de R$ 300,00
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
