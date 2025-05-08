@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+        form { display: grid; gap: 15px; }
+        fieldset { border: 1px solid #ddd; padding: 15px; border-radius: 5px; }
+        legend { font-weight: bold; }
+        .form-group { display: grid; gap: 5px; }
+        button { padding: 10px 15px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <h1>Cadastro de Cliente</h1>
+    
+    <form action="/cadastro" method="POST" enctype="multipart/form-data">
+      
+            <legend>Dados Pessoais</legend>
+            
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="genero" id="masculino" value="masculino" checked>
+                    <label class="form-check-label" for="masculino">
+                      Masculino
+                    </label>
+                  </div>
+                  
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="genero" id="feminino" value="feminino">
+                    <label class="form-check-label" for="feminino">
+                      Feminino
+                    </label>
+                  </div>
+                  
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="genero" id="nao-binario" value="nao-binario">
+                    <label class="form-check-label" for="nao-binario">
+                      Não Binário
+                    </label>
+                  </div>
+                  
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="genero" id="prefiro-nao-informar" value="prefiro-nao-informar">
+                    <label class="form-check-label" for="prefiro-nao-informar">
+                      Prefiro não informar
+                    </label>
+                  </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="data-nascimento">Data de Nascimento:</label>
+                <input type="date" id="data-nascimento" name="data_nascimento" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="cor-favorita">Cor Favorita:</label>
+                <input type="color" id="cor-favorita" name="cor_favorita" value="#ff0000">
+            </div>
+       
+    
+            <legend>Endereço</legend>
+            
+            <div class="form-group">
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado" required>
+                    <option value="">Selecione...</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" required>
+            </div>
+    
+        
+    
+            <legend>Preferências</legend>
+            
+            <div class="form-group">
+                <label>Interesses:</label>
+                <div>
+                    <input type="checkbox" id="esportes" name="interesses[]" value="esportes">
+                    <label for="esportes">Esportes</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="musica" name="interesses[]" value="musica">
+                    <label for="musica">Música</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="viagens" name="interesses[]" value="viagens">
+                    <label for="viagens">Viagens</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="viagens" name="interesses[]" value="viagens">
+                    <label for="viagens">Carros</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="viagens" name="interesses[]" value="viagens">
+                    <label for="viagens">Tecnologia</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="viagens" name="interesses[]" value="viagens">
+                    <label for="viagens">Livros</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="viagens" name="interesses[]" value="viagens">
+                    <label for="viagens">Arte</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="viagens" name="interesses[]" value="viagens">
+                    <label for="viagens">Moda</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="viagens" name="interesses[]" value="viagens">
+                    <label for="viagens">Gastronomia</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="viagens" name="interesses[]" value="viagens">
+                    <label for="viagens">Jogos</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="viagens" name="interesses[]" value="viagens">
+                    <label for="viagens">Cinema</label>
+                </div>
+            </div>
+            
+       
+        
+       
+            <legend>Documentos</legend>
+            
+            <div class="form-group">
+                <label for="foto">Foto do Perfil:</label>
+                <input type="file" id="foto" name="foto" accept="image/*" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="curriculo">Currículo (PDF):</label>
+                <input type="file" id="curriculo" name="curriculo" accept=".pdf">
+            </div>
+       
+        
+        <div class="form-group">
+            <label for="observacoes">Mensagem:</label>
+            <textarea id="observacoes" name="observacoes" rows="4" 
+                      placeholder="Alguma observação importante..."></textarea>
+        </div>
+        
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>
