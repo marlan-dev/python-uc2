@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Card Interativo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+      background: #f0f0f0;
+    }
+
+    /* Esconde o input */
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    /* Estilo do card */
+    .card {
+      width: 300px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      cursor: pointer;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+      background: #f9f9f9;
+    }
+
+    /* Conteúdo expansível */
+    .card-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+
+    /* Quando o checkbox está marcado, expande o conteúdo */
+    input:checked + label .card-content {
+      max-height: 200px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <input type="checkbox" id="toggle-card" />
+  <label for="toggle-card">
+    <div class="card">
+      <h2>Título do Card</h2>
+      <p>Resumo rápido do conteúdo.</p>
+
+      <div class="card-content">
+        <p>Este é o conteúdo extra do card que aparece quando o usuário clica. Tudo isso é feito apenas com HTML e CSS, sem uma linha de JavaScript!</p>
+      </div>
+    </div>
+  </label>
+
+</body>
+</html>
